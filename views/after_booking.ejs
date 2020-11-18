@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>MAP</title>
+</head>
+<body>
+
+
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <div class="container">
+
+
+            <div class="logo pr-2">
+                <img src="img/logo.png" alt="">
+            </div>
+            <a href="http://localhost:3000/" class="navbar-brand">
+            <i>AMBULARE</i>
+          </a>
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarcollapse">
+            <span class="navbar-toggler-icon">
+
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarcollapse">
+            <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+              <a href="http://localhost:3000/activity" class="nav-link">
+                ACTIVITIES
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="http://localhost:3000/aboutus" class="nav-link">
+              ABOUT US
+          </a>
+          </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<h1></h1>
+<h4>HOSPITAL:</h4>
+<h6><%= h_name %></h6>
+<h6>DRIVERS NAME:</h4>
+<h6><%= d_name %></h6>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcqGoh3JSwGsopwo81zRXaPr_uQNI4zCM">
+</script>
+
+<script type="text/javascript">
+
+
+var directionDisplay;
+var directionsService = new google.maps.DirectionsService();
+var map;
+var stop;
+var markers = [];
+var waypts = [];
+
+function initialize() {
+directionsDisplay = new google.maps.DirectionsRenderer({
+  suppressMarkers: true
+});
+
+var myOptions = {
+  zoom: 3,
+  mapTypeId: google.maps.MapTypeId.ROADMAP,
+}
+
+map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+directionsDisplay.setMap(map);
+calcRoute();
+}
+
+function calcRoute() {
+
+for (var i = 0; i < markers.length; i++) {
+  markers[i].setMap(null);
+}
+
+start = new google.maps.LatLng(30.903900, 75.89356);
+end = new google.maps.LatLng(<%= flat %>,<%= flong%>);
+
+createMarker(start, 'start', false);
+createMarker(end, 'end', false);
+
+var request = {
+  origin: start,
+  destination: end,
+
+  optimizeWaypoints: true,
+  travelMode: google.maps.DirectionsTravelMode.WALKING
+};
+
+directionsService.route(request, function(response, status) {
+  if (status == google.maps.DirectionsStatus.OK) {
+    directionsDisplay.setDirections(response);
+    var i, route = response.routes[0];
+
+  }
+});
+}
+
+function createMarker(latlng, posRef, draggable) {
+
+var marker = new google.maps.Marker({
+  position: latlng,
+  map: map,
+  draggable: draggable,
+  posRef: posRef
+});
+
+markers.push(marker);
+
+google.maps.event.addListener(marker, 'dragend', function() {
+  console.log(this.getPosition().lat(), this.getPosition().lng());
+  calcRoute();
+});
+}
+
+
+</script>
+
+<h1>GOOGLE MAP</h1>
+<div class="map-canvas" style="width:200px;height:380px;"></div>
+
+
+</body>
+</html>

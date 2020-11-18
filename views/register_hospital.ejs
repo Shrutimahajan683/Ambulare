@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <form class="" action="/register_hospital" method="post">
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="inputEmail4">name</label>
+                <input type="name" class="form-control" id="inputEmail4" name="name">
+              </div>
+              <div class="form-group col-md-12">
+                <label for="inputPassword4">Password</label>
+                <input type="password" class="form-control" id="inputPassword4" name="password">
+              </div>
+              <div class="form-group col-md-12">
+                <label for="inputPassword5">Confirm Password</label>
+                <input type="password" class="form-control" id="inputPassword5" name="cpassword">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">Address</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address">
+            </div>
+            <div class="form-group">
+              <label for="inputAddress2">Address 2</label>
+              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" name="address2">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity" name="city">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <input type="text" class="form-control" id="inputState" name="state">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" id="inputZip" name="zip">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress2">email</label>
+              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" name="email">
+            </div>
+            <h4>Geolocation</h4>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">latitude</label>
+                <input type="text" class="form-control" id="inputCity" name="lat">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputState">longitude</label>
+                <input type="text" class="form-control" id="inputState" name="long">
+              </div>
+            </div>
+            <div>
+                    <h4 class="text-center">Doctors' Information</h4>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">Doctor Name</label>
+                            <input type="text" class="form-control" id="inputCity" name="name_d1">
+                        </div>
+
+                        <!--<div class="form-group col-md-4">
+                            <label for="inputState">Specialization</label>
+                            <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                            </select>
+                        </div>-->
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">Specialization</label>
+                            <input type="text" class="form-control" id="inputCity" name="spec_d1">
+                        </div>
+
+                        <!--<form class="form-group col-md-2">
+                            <label for="appt">Select duty start time:</label>
+                            <input type="time" id="appt" class="form-control">
+
+                        </form>
+                        <form class="form-group col-md-2">
+                            <label for="appt">Select duty end time:</label>
+                            <input type="time" id="appt" class="form-control">
+
+                        </form>-->
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">Doctor Name</label>
+                            <input type="text" class="form-control" id="inputCity" name="name_d2">
+                        </div>
+
+                        <!--<div class="form-group col-md-4">
+                            <label for="inputState">Specialization</label>
+                            <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                            </select>
+                        </div>-->
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">Specialization</label>
+                            <input type="text" class="form-control" id="inputCity" name="spec_d2">
+                        </div>
+
+                        <!--<form class="form-group col-md-2">
+                            <label for="appt">Select duty start time:</label>
+                            <input type="time" id="appt" class="form-control">
+
+                        </form>
+                        <form class="form-group col-md-2">
+                            <label for="appt">Select duty end time:</label>
+                            <input type="time" id="appt" class="form-control">
+
+                        </form>-->
+                    </div>
+                </div>
+
+                <!-- DRIVERS' INFORMATION___________________________________________________________________ -->
+
+
+                <div>
+                    <h4 class="text-center">Drivers' Information</h4>
+
+                    <!-- ________________________________________________________________ -->
+
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="inputCity">Driver Name</label>
+                            <input type="text" class="form-control" id="inputCity" name="name_dr1">
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label for="inputCity">Driver Number</label>
+                            <input type="text" class="form-control" id="inputCity" name="dr_no1">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputCity">Availablity_Status</label>
+                            <input type="text" class="form-control" id="inputCity" name="avail_dr1">
+                        </div>
+                        <!--<form class="form-group col-md-2">
+                            <label for="appt">Select duty start time:</label>
+                            <input type="time" id="appt" class="form-control">
+
+                        </form>
+                        <form class="form-group col-md-2">
+                            <label for="appt">Select duty end time:</label>
+                            <input type="time" id="appt" class="form-control">
+
+                        </form>-->
+                    </div>
+
+                        <!-- __________________________________________________________________ -->
+
+
+
+                        <!--<form>
+                            <div class="form-group ">
+                                <label for="exampleFormControlFile1">Driving License</label>
+                                <input type="file" class="form-control-file" id="certi">
+                            </div>
+                        </form>
+
+
+
+                        <form>
+                            <div class="form-group ">
+                                <label for="exampleFormControlFile1">Driver photo</label>
+                                <input type="file" class="form-control-file" id="certi">
+                            </div>
+                        </form>
+                    <hr>-->
+
+
+                    <!-- ______________________________________________________________________________ -->
+
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="inputCity">Driver Name</label>
+                            <input type="text" class="form-control" id="inputCity" name="name_dr2">
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label for="inputCity">Driver Number</label>
+                            <input type="text" class="form-control" id="inputCity" name="dr_no2">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputCity">Availablity_Status</label>
+                            <input type="text" class="form-control" id="inputCity" name="avail_dr2">
+                        </div>
+                        <!--<form class="form-group col-md-2">
+                            <label for="appt">Select duty start time:</label>
+                            <input type="time" id="appt" class="form-control">
+
+                        </form>
+                        <form class="form-group col-md-2">
+                            <label for="appt">Select duty end time:</label>
+                            <input type="time" id="appt" class="form-control">
+
+                        </form>-->
+                    </div>
+</div>
+                 <div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="inputCity">Driver Name</label>
+                            <input type="text" class="form-control" id="inputCity" name="name_dr3">
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label for="inputCity">Driver Number</label>
+                            <input type="text" class="form-control" id="inputCity" name="dr_no3">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputCity">Availablity_Status</label>
+                            <input type="text" class="form-control" id="inputCity" name="avail_dr3">
+                        </div>
+                        <!--<form class="form-group col-md-2">
+                            <label for="appt">Select duty start time:</label>
+                            <input type="time" id="appt" class="form-control">
+
+                        </form>
+                        <form class="form-group col-md-2">
+                            <label for="appt">Select duty end time:</label>
+                            <input type="time" id="appt" class="form-control">
+
+                        </form>-->
+                    </div>
+
+                    <!-- __________Ambulance Information_________ -->
+
+
+              <div>
+                  <h4 class="text-center">Ambulance Information</h4>
+
+                  <div class="form-row">
+
+                      <!--<form>
+                          <div class="form-group">
+                              <label for="exampleFormControlFile1">Ambulance Image</label>
+                              <input type="file" class="form-control-file" id="certi">
+                          </div>
+                      </form>-->
+
+
+                      <div class="form-group col-md-6">
+                          <label for="inputCity">Ambulance Number Plate</label>
+                          <input type="text" class="form-control" id="inputCity" name="a_no1">
+                      </div>
+
+                      <div class="form-group col-md-6">
+                          <label for="inputCity">Availablity_Status</label>
+                          <input type="text" class="form-control" id="inputCity" name="avail_no1">
+                      </div>
+
+                      <!--<form class="form-group col-md-2">
+                          <label for="appt">Select duty start time:</label>
+                          <input type="time" id="appt" class="form-control">
+
+                      </form>
+                      <form class="form-group col-md-2">
+                          <label for="appt">Select duty end time:</label>
+                          <input type="time" id="appt" class="form-control">
+
+                      </form>
+                  </div>
+              </div>
+
+
+
+
+
+
+
+                  <div class="form-row">
+                          <div class="form-group col-md-4">
+                              <label for="inputCity">City</label>
+                              <input type="text" class="form-control" id="inputCity">
+                          </div>
+
+                          <div class="form-group col-md-4">
+                              <label for="inputState">State</label>
+                              <select id="inputState" class="form-control">
+                              <option selected>Choose...</option>
+                              <option>...</option>
+                              </select>
+                          </div>
+
+                          <div class="form-group col-md-4">
+                              <label for="inputZip">Zip</label>
+                              <input type="text" class="form-control" id="inputZip">
+                          </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gridCheck">
+                      <label class="form-check-label" for="gridCheck">
+                        Check me out
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Sign in</button>
+                </form>-->
+
+          </div>
+          <div>
+
+
+              <div class="form-row">
+
+                  <!--<form>
+                      <div class="form-group">
+                          <label for="exampleFormControlFile1">Ambulance Image</label>
+                          <input type="file" class="form-control-file" id="certi">
+                      </div>
+                  </form>-->
+
+
+                  <div class="form-group col-md-6">
+                      <label for="inputCity">Ambulance Number Plate</label>
+                      <input type="text" class="form-control" id="inputCity" name="a_no2">
+                  </div>
+
+                  <div class="form-group col-md-6">
+                      <label for="inputCity">Availablity_Status</label>
+                      <input type="text" class="form-control" id="inputCity" name="avail_no2">
+                  </div>
+
+                  <!--<form class="form-group col-md-2">
+                      <label for="appt">Select duty start time:</label>
+                      <input type="time" id="appt" class="form-control">
+
+                  </form>
+                  <form class="form-group col-md-2">
+                      <label for="appt">Select duty end time:</label>
+                      <input type="time" id="appt" class="form-control">
+
+                  </form>
+              </div>
+          </div>
+
+
+
+
+
+
+
+              <div class="form-row">
+                      <div class="form-group col-md-4">
+                          <label for="inputCity">City</label>
+                          <input type="text" class="form-control" id="inputCity">
+                      </div>
+
+                      <div class="form-group col-md-4">
+                          <label for="inputState">State</label>
+                          <select id="inputState" class="form-control">
+                          <option selected>Choose...</option>
+                          <option>...</option>
+                          </select>
+                      </div>
+
+                      <div class="form-group col-md-4">
+                          <label for="inputZip">Zip</label>
+                          <input type="text" class="form-control" id="inputZip">
+                      </div>
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                  <label class="form-check-label" for="gridCheck">
+                    Check me out
+                  </label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Sign in</button>
+            </form>-->
+
+      </div>
+      <div>
+
+
+          <div class="form-row">
+
+              <!--<form>
+                  <div class="form-group">
+                      <label for="exampleFormControlFile1">Ambulance Image</label>
+                      <input type="file" class="form-control-file" id="certi">
+                  </div>
+              </form>-->
+
+
+              <div class="form-group col-md-6">
+                  <label for="inputCity">Ambulance Number Plate</label>
+                  <input type="text" class="form-control" id="inputCity" name="a_no3">
+              </div>
+
+              <div class="form-group col-md-6">
+                  <label for="inputCity">Availablity_Status</label>
+                  <input type="text" class="form-control" id="inputCity" name="avail_no3">
+              </div>
+      </div>
+              <!--<form class="form-group col-md-2">
+                  <label for="appt">Select duty start time:</label>
+                  <input type="time" id="appt" class="form-control">
+
+              </form>
+              <form class="form-group col-md-2">
+                  <label for="appt">Select duty end time:</label>
+                  <input type="time" id="appt" class="form-control">
+
+              </form>
+          </div>
+      </div>
+
+
+
+
+
+
+
+          <div class="form-row">
+                  <div class="form-group col-md-4">
+                      <label for="inputCity">City</label>
+                      <input type="text" class="form-control" id="inputCity">
+                  </div>
+
+                  <div class="form-group col-md-4">
+                      <label for="inputState">State</label>
+                      <select id="inputState" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>...</option>
+                      </select>
+                  </div>
+
+                  <div class="form-group col-md-4">
+                      <label for="inputZip">Zip</label>
+                      <input type="text" class="form-control" id="inputZip">
+                  </div>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">
+                Check me out
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Sign in</button>
+
+        </form>-->
+
+</div>
+</div>
+
+
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Check me out
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </form>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+    <div class="end mt-100">
+        <div class="icon-bar">
+          <p>
+              <a href="#"><i class="fa fa-home"></i></a><strong>ADDRESS : 291 J P NAGAR</strong>
+               <br>
+          </p>
+          <p>
+              <a href="#"><i class="fa fa-envelope"></i></a><strong>piyushsethi291@gmail.com</strong>
+              <br>
+          </p>
+          <p>
+              <a href="#"><i class="fas fa-phone-alt"></i></a> <strong>8196967111</strong>
+              <br>
+         </p>
+
+        </div>
+        <section>
+
+            <a href="#" class="facebook"><img src="img/fblogo.png"></a>
+            <a href="#" class="twitter"><img src="img/twitter.jfif"></a>
+            <a href="#" class="linkedin"><img src="img/linkedin.jfif"></a>
+            <a href="#" class="instagram"><img src="img/instagram.jfif"></a>
+
+        </section>
+
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

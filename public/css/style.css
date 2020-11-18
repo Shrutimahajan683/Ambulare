@@ -1,0 +1,184 @@
+body{
+    background-color: #333;
+    color:#fff;
+
+}
+
+.navbar{
+    border-bottom:#00e640 3px solid;
+    opacity:0.8;
+}
+.logo img{
+    height: 50px;
+    width: 50px;
+}
+
+#home-section{
+    background:url('../img/5.jpg') no-repeat;
+    min-height:700px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.dark-overlay{
+    background-color:rgba(0,0,0,0.7);
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    min-height:700px;
+}
+
+.home-inner{
+    padding-top: 150px;
+}
+
+.card-form{
+    opacity:0.8;
+}
+
+.bg-piyush{
+    background-color: #00e640;
+}
+
+.bas{
+    padding-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+    /* border-bottom:#00e640 3px solid; */
+}
+
+.pics {
+	max-width: 40%;
+	float:left;
+	padding-bottom: 15px;
+}
+
+.card-hos{
+    max-width: 40%;
+	float:left;
+    padding-bottom: 15px;
+    border: #00e640 1px solid;
+}
+
+.end{
+    background-color: #2e3131;
+    padding-top: 50px;
+    text-align: center;
+    margin:0 auto;
+    padding-bottom: 20px;
+}
+
+section .facebook img {
+    max-width: 30px;
+    max-height: 30px;
+    background: #3B5998;
+    color: white;
+  }
+
+section .twitter img{
+    max-width: 30px;
+    max-height: 30px;
+    background: #55ACEE;
+    color: white;
+  }
+
+section	.linkedin img {
+   max-width: 30px;
+    max-height: 30px;
+    background: #007bb5;
+    color: white;
+  }
+
+section .instagram img{
+      max-width: 30px;
+    max-height: 30px;
+    background: #125688;
+    color: white;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  .main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    padding-top:70px; 
+  }
+
+
+
+
+
+
+  .sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 40;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .special h3:hover{
+      width:40%;
+      margin:0 auto;
+      box-shadow: 0 0 10px #00e640, 0 0 10px #00e640, 0 0 10px #00e640;
+  }
+  
+ video{
+     padding-bottom: 30px;;
+      width:auto;
+      height: 500px;;
+      margin: auto;
+      display:block;
+  }
+
+  .people{
+      padding-top: 100px;
+  }
+  .people .card{
+    background-color: #333;
+  }
+  
+  .form-row{
+      padding-top: 50px;
+  }
+
+
+  footer{
+      bottom:0;
+      width:100%;
+  }
+
+  h4{
+      padding-top: 25px;
+      text-align:center;
+  }
+  h4:hover{
+    font-size:50px;
+    margin-right: auto;
+    margin-left: auto;
+  }
